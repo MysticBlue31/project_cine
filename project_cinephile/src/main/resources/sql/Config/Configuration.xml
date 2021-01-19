@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	
+<!-- 	변수설정   -->
+	<typeAliases>
+		<typeAlias type="com.project.cine.dtos.BoardDto" alias="BoardDto"/>
+		<typeAlias type="com.project.cine.dtos.FavorDto" alias="FavorDto"/>
+		<typeAlias type="com.project.cine.dtos.MovieDto" alias="MovieDto"/>
+		<typeAlias type="com.project.cine.dtos.UserDto" alias="UserDto"/>
+	</typeAliases>
+	
+	
+	<mappers>
+		<mapper resource="./sql/Board_Mapper.xml"/>
+		<mapper resource="./sql/Favor_Mapper.xml"/>
+		<mapper resource="./sql/Movie_Mapper.xml"/>
+		<mapper resource="./sql/User_Mapper.xml"/>
+	</mappers>
+</configuration>
+
