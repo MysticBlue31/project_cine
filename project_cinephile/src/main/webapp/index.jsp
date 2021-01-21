@@ -9,5 +9,6 @@
 </head>
 <body>
 <a href="home.do">HOME</a>
+<a href="movieHome.do">MOVIE HOME</a>
 </body>
 </html>

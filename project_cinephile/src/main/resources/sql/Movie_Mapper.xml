@@ -4,6 +4,19 @@
 
 <mapper namespace="com.project.cine.movie">
 
+	<update id="setAvgRate" parameterType="String">
+		UPDATE MINFO_INFO mi
+		SET mi.M_AVGRATE = (SELECT ROUND(AVG(NVL(M_RATE, 0)), 2)
+							FROM MINFO_INFO mi, MINFO_COMMENT mc 
+							WHERE mi.M_CODE = #{m_code} AND mc.M_CODE = mi.M_CODE)
+		WHERE mi.M_CODE = #{m_code}
+	</update>
+	
+	<select id="getTopMovies" resultType="MovieDto">
+		SELECT *
+		FROM (SELECT * FROM MINFO_INFO ORDER BY M_AVGRATE DESC)
+		<![CDATA[WHERE ROWNUM <= 5]]>
+	</select>
 	
 </mapper>
 
