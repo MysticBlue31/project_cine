@@ -48,5 +48,26 @@ public class UserDto {
 	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
+	
+	public UserDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public UserDto(String id, String pw, String email, String grade, Date regdate, String enabled) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.email = email;
+		this.grade = grade;
+		this.regdate = regdate;
+		this.enabled = enabled;
+	}
+	@Override
+	public String toString() {
+		return "UserDto [id=" + id + ", pw=" + pw + ", email=" + email + ", grade=" + grade + ", regdate=" + regdate
+				+ ", enabled=" + enabled + "]";
+	}
+	
+	
 
 }

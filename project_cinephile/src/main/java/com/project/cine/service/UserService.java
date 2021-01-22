@@ -1,13 +1,26 @@
 package com.project.cine.service;
+import javax.inject.Inject;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.cine.daos.UserDao;
+import com.project.cine.dtos.UserDto;
 
-@Service("userService")
-public class UserService implements IMovieService {
-	@Autowired
-	private UserDao userDao;
+@Service
+public class UserService implements IUserService {
 	
+	private final UserDao userDao;
+	
+	@Inject
+	public UserService(UserDao userDao) {
+		this.userDao=userDao;
+	}
+
+	//회원 가입 처리
+	@Override
+	public void register(UserDto userDto) throws Exception {
+		userDao.register(userDto);
+		
+	}
 }
+

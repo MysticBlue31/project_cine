@@ -4,7 +4,7 @@
 
 <mapper namespace="com.project.cine.user">
 <!-- 회원 정보 정의할 resultMap 정의 -->
-<resultMap type="UserResult" id="UserDto">
+<resultMap type="com.project.cine.dtos.UserDto" id="UserDto">
 <result property="id" column="id"/>
 <result property="pw" column="pw"/>
 <result property="email" column="email"/>
@@ -14,31 +14,13 @@
 <result property="enabled" column="enabled"/>
 </resultMap>
 
-<select id="login" resultType="UserDto" parameterType="java.util.Map">
-<![CDATA[
-			select * from MINFO_USER
-				where id=#{id}
-					and pw=#{pw}
-]]>
-</select>
-
-<select id="selectOverlappedID" parameterType="String" resultType="String">
-	select decode(count(*),1, 'true',0,'false')
-	from MINFO_USER
-	where id=#{id}
-</select>
-
-<insert id="insertNewMember" parameterType="UserDto">
-<![CDATA[
-		insert into MINFO_USER(
-		id,pw,email,name,grade,regdate,enabled
-		)
-		
-		values(
-		#{id},#{pw},#{email},#{name},#{grade},#{regdate},#{enabled}
-		)
-		
-]]>
+<!-- 회원가입 -->
+<insert id="register" parameterType="UserDto">
+	INSERT INTO MINFO_USER(
+	ID,PW,EMAIL,NAME,GRADE,REGDATE,ENABLED
+	) VALUES (#{ID},#{PW},#{EMAIL},#{GRAGE},#{REGDATE},#{ENABLED}
+	)
 </insert>
+
 </mapper>
 
