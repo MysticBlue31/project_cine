@@ -10,5 +10,6 @@
 <body>
 <a href="home.do">HOME</a>
 <a href="movieHome.do">MOVIE HOME</a>
+<a href="boardHome.do">BOARD HOME</a>
 </body>
 </html>
