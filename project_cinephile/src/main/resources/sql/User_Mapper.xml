@@ -22,5 +22,10 @@
 	)
 </insert>
 
+<select id="login" resultMap="userDtoResultMap">
+select * from MINFO_USER
+where ID=#{ID}
+</select>
+
 </mapper>
 
