@@ -4,6 +4,32 @@
 
 <mapper namespace="com.project.cine.board">
 
+
+<!-- resultMap: property(dto의 멤버필드), column(DB컬럼명) 
+	<resultMap type="com.project.cine.BoardDto" id="BoardDtoMap">
+		<result property="w_seq" column="w_seq"/>
+		<result property="id" column="ID"/>
+		<result property="w_title" column="W_TITLE"/>
+		<result property="w_content" column="W_CONTENT"/>
+		<result property="w_regdate" column="W_REGDATE"/>
+		<result property="w_ref" column="W_REF"/>
+		<result property="w_reply" column="W_REPLY"/>
+		
+	<collection property="loginDto" resultMap="loginDtoMap" />
+	</resultMap>
 	
+	<select id="getAllList" resultMap="BoardDtoMap"
+	parameterType="Map">
+		SELECT W_SEQ, ID, W_TITLE, W_CONTENT, W_REGDATE, W_REF,
+			W_REPLY
+			FROM MINFO_BOARD 
+			<where>
+				<if test="seq!=null">
+					W_SEQ=#{w_seq}
+				</if>
+			</where>
+			ORDER BY REFER DESC, STEP
+	</select>
+-->
 </mapper>
 

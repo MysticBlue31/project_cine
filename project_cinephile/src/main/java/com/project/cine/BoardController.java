@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +16,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import com.project.cine.dtos.BoardDto;
+import com.project.cine.service.BoardService;
 import com.project.cine.service.IBoardService;
 
 
@@ -44,6 +49,19 @@ public class BoardController {
 	}
 	
 	
+	/*@RequestMapping(value = "/boardHome.do", method = RequestMethod.GET)
+	public String boardList(HttpServletRequest request,Locale locale, Model model) {
+		logger.info("글목록보기 {}.", locale);
+		
+		HttpSession session=request.getSession();
+		session.removeAttribute("readcount");
+		
+		List<BoardDto> list=IBoardService.getAllList();
+		model.addAttribute("list", list );
+		
+		return "boardHome";
+	}
+	*/
 	
 
 }
