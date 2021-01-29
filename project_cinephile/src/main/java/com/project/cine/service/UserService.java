@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.project.cine.daos.UserDao;
+import com.project.cine.dtos.LoginDto;
 import com.project.cine.dtos.UserDto;
 
 @Service
@@ -22,5 +23,12 @@ public class UserService implements IUserService {
 		userDao.register(userDto);
 		
 	}
+	//로그인 처리
+	@Override
+	public UserDto login(LoginDto loginDto) throws Exception {
+		return userDao.login(loginDto);
+	}
+	
+	
 }
 

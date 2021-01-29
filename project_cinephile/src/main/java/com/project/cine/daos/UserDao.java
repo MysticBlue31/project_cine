@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.project.cine.dtos.LoginDto;
 import com.project.cine.dtos.UserDto;
 
 @Repository
@@ -26,6 +27,15 @@ public class UserDao implements IUserDao {
 		sqlSession.insert(NAMESPACE+".register",userDto);
 		
 	}
+
+	@Override
+	public UserDto login(LoginDto loginDto) throws Exception {
+		
+		return sqlSession.selectOne(NAMESPACE+ ".login", loginDto);
+	}
+	
+	//로그인 처리
+	
 
 	
 	

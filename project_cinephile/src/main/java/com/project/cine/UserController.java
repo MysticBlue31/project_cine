@@ -1,10 +1,15 @@
 package com.project.cine;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.project.cine.dtos.LoginDto;
 import com.project.cine.dtos.UserDto;
 import com.project.cine.service.UserService;
 
@@ -36,6 +41,20 @@ public class UserController {
 		//로그인단 페이지 만들어지면 주소 수정해야됨
 		return "redirect:/user/login";
 	}
+	//로그인 페이지
+	@RequestMapping(value="/login", method = RequestMethod.GET)
+	public String login() throws Exception {
+		return "/user/login"; //로그인 jsp 페이지 만들어야됨
+	}
+	
+	//로그인 처리
+	@RequestMapping(value="/loginPost", method = RequestMethod.POST)
+	public void loginPOST(LoginDto loginDto, HttpSession httpSession, Model model) throws Exception {
+		UserDto userDto = userService.login(loginDto);
+		
+		return;
+		
+}
 }
 
 
