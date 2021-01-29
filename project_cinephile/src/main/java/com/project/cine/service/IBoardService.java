@@ -7,10 +7,7 @@ import com.project.cine.dtos.BoardDto;
 public interface IBoardService {
 
 	
-		public static List<BoardDto> getAllList() {
-			// TODO Auto-generated method stub
-			return null;
-		}		//1.글목록 조회
+		public List<BoardDto> getAllList();				//1.글목록 조회
 	
 		public boolean insertBoard(BoardDto dto);		//2.새글 추가
 		

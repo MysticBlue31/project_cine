@@ -33,35 +33,37 @@ public class BoardController {
 	private IBoardService boardService;
 	
 							//이름은 마음대로 고치면 됨(메서드명도 마찬가지)
+//	@RequestMapping(value = "/boardHome.do", method = RequestMethod.GET)
+//	public String Boardhome(Locale locale, Model model) {
+//		logger.info("", locale);
+//		
+//		Date date = new Date();
+//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+//		
+//		String formattedDate = dateFormat.format(date);
+//		
+//		model.addAttribute("serverTime", formattedDate );
+//		
+//		
+//		return "home";
+//	}
+//	
+	
 	@RequestMapping(value = "/boardHome.do", method = RequestMethod.GET)
-	public String Boardhome(Locale locale, Model model) {
-		logger.info("", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		
-		return "home";
-	}
-	
-	
-	/*@RequestMapping(value = "/boardHome.do", method = RequestMethod.GET)
 	public String boardList(HttpServletRequest request,Locale locale, Model model) {
 		logger.info("글목록보기 {}.", locale);
 		
 		HttpSession session=request.getSession();
 		session.removeAttribute("readcount");
 		
-		List<BoardDto> list=IBoardService.getAllList();
+		List<BoardDto> list= boardService.getAllList();
 		model.addAttribute("list", list );
+		
+		System.out.println(list);
+		
+		int s = 0;
 		
 		return "boardHome";
 	}
-	*/
 	
-
 }
