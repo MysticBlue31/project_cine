@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>영화수다 게시판 | Cinephile</title>
 </head>
 <body>
-
+<h1>게시판 작업중</h1>
 </body>
 </html>
