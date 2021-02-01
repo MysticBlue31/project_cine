@@ -10,6 +10,11 @@
 <title>로그인 | Cinephile</title>
 
 <style type="text/css">
+
+ a:link { color: red; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
+
 #wrapper {
 	width: 1200px;
 	border: 1px solid #eee;
@@ -23,7 +28,7 @@
 }
 
 #head {
-	height: 100px;
+	height: 110px;
 	margin: 20px;
 }
 
@@ -62,14 +67,15 @@ h4 {
 
 <body>
 
-	<div id="wrapper" style="border: 1px solid black">
+	<div id="wrapper" style="border: 1px solid white">
 
-		<div id="head" style="border: 1px solid black">
+		<div id="head" style="border: 1px solid white">
 			<h1>Cinephile</h1>
-			<h4><a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
+				<h4><a href="getMovies.do">HOME</a>&nbsp;|&nbsp;<a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
+			<hr>
 		</div>
 
-		<div id="body" style="border: 1px solid black">
+		<div id="body" style="border: 1px solid white">
 			<h2>로그인</h2>
 			<br>
 			<br>
@@ -100,12 +106,12 @@ h4 {
 
 				</table>
 				<br>
-				        <p class="login_msg">아직 cinephile이 아니라면 <a href="signin.do">회원가입</a> 하세요!</p>
+				        <p class="login_msg">아직 cinephile이 아니라면 <u><b><a href="signin.do">회원가입</a></b></u> 하세요!</p>
 			</div>
 
 		</div>
 
-		<div id="foot" style="border: 1px solid black;">Bottom</div>
+		<div id="foot" style="border: 1px solid white;"></div>
 
 	</div>
 

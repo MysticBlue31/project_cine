@@ -4,28 +4,28 @@
 
 <mapper namespace="com.project.cine.user">
 <!-- 회원 정보 정의할 resultMap 정의 -->
-<resultMap type="com.project.cine.dtos.UserDto" id="UserDto">
-<result property="id" column="id"/>
-<result property="pw" column="pw"/>
-<result property="email" column="email"/>
-<result property="name" column="name"/>
-<result property="grade" column="grade"/>
-<result property="regdate" column="regdate"/>
-<result property="enabled" column="enabled"/>
-</resultMap>
+<!-- <resultMap type="com.project.cine.dtos.UserDto" id="UserDto"> -->
+<!-- <result property="id" column="id"/> -->
+<!-- <result property="pw" column="pw"/> -->
+<!-- <result property="email" column="email"/> -->
+<!-- <result property="name" column="name"/> -->
+<!-- <result property="grade" column="grade"/> -->
+<!-- <result property="regdate" column="regdate"/> -->
+<!-- <result property="enabled" column="enabled"/> -->
+<!-- </resultMap> -->
 
-<!-- 회원가입 -->
-<insert id="register" parameterType="UserDto">
-	INSERT INTO MINFO_USER(
-	ID,PW,EMAIL,NAME,GRADE,REGDATE,ENABLED
-	) VALUES (#{ID},#{PW},#{EMAIL},#{GRAGE},#{REGDATE},#{ENABLED}
-	)
-</insert>
+<!--  회원가입   -->
+<!-- <insert id="register" parameterType="UserDto"> -->
+<!-- 	INSERT INTO MINFO_USER(  -->
+<!-- 	ID,PW,EMAIL,NAME,GRADE,REGDATE,ENABLED -->
+<!-- 	) VALUES (#{ID},#{PW},#{EMAIL},#{GRAGE},#{REGDATE},#{ENABLED} -->
+<!-- 	) -->
+<!-- </insert> -->
 
-<select id="login" resultMap="userDtoResultMap">
-select * from MINFO_USER
-where ID=#{ID}
-</select>
+<!-- <select id="login" resultMap="userDtoResultMap"> -->
+<!-- select * from MINFO_USER -->
+<!-- where ID=#{ID} -->
+<!-- </select> -->
 
 </mapper>
 

@@ -10,7 +10,7 @@
 	//자바스크립트를 이용해서 글목록보기로 이동하기
 	function boardListView(){
 		location.href
-		="boardHome.do";
+		="board.do";
 	}
 </script>
 </head>

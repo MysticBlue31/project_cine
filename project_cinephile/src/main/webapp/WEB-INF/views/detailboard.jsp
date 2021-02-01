@@ -14,7 +14,7 @@
 <script type="text/javascript">
 	//자바스크립트를 이용해서 글목록보기로 이동하기
 	function boardListView(){
-		location.href="boardHome.do";
+		location.href="board.do";
 	}
 	//글 삭제요청하기
 	function delBoard(seq){//seq는 삭제할 글의 seq값

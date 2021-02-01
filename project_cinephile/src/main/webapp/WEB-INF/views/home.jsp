@@ -52,8 +52,9 @@ h4 {
 }
 
 img {
-	width: 13.95%;
-	height: 13.95%;
+	width: 13.5%;
+	height: 13.5%;
+	margin-left: 3.5px;
 }
 </style>
 </head>
@@ -62,14 +63,14 @@ img {
 %>
 <body>
 
-	<div id="wrapper" style="border: 1px solid black">
+	<div id="wrapper" style="border: 1px solid white">
 
-		<div id="head" style="border: 1px solid black">
+		<div id="head" style="border: 1px solid white">
 			<h1>Cinephile</h1>
-			<h4><a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
+			<h4><a href="getMovies.do">HOME</a>&nbsp;|&nbsp;<a href="myPageView.do">마이페이지</a>&nbsp;|&nbsp;<a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
 		</div>
 
-		<div id="body" style="border: 1px solid black">
+		<div id="body" style="border: 1px solid white">
 			<br>
 			<br>
 			<br>
@@ -89,7 +90,7 @@ img {
 				{
 					MovieDto dto = list.get(i);
 					%>
-					<img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>">
+					<a href="movieInfo.do"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
 					<%
 				}
 			%>
@@ -109,7 +110,7 @@ img {
 <!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1890/189000_P12_101301.jpg"> -->
 			</div>
 		</div>
-		<div id="foot" style="border: 1px solid black;">Bottom</div>
+		<div id="foot" style="border: 1px solid white;"></div>
 	</div>
 </body>
 

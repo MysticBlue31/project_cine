@@ -26,9 +26,9 @@ public class BoardDao implements IBoardDao {
 
 	@Override
 	public BoardDto getBoard(int w_seq) {
-		Map<String, Integer>map=new HashMap<>();
-		map.put("w_seq", w_seq);
-		return sqlSession.selectOne(namespace+"getAllList",map);
+//		Map<String, Integer>map=new HashMap<>();
+//		map.put("w_seq", w_seq);
+		return sqlSession.selectOne(namespace+"getAllList", w_seq);
 	}
 	
 	@Override

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>글목록보기</title>
+<title>영화수다 게시판 | Cinephile</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <style type="text/css">
 	th {
@@ -125,7 +125,7 @@
 //   ---->  Util 클래스에 구현하였음
 %>
 <body>
-<h1>글목록 조회하기1</h1>
+<h1>게시판 작업중</h1>
 <textarea rows="2" cols="40" name="preContent"></textarea>
 <form action="muldel.do"  method="post" onsubmit="return chkConfirm()">
 <table border="1">
