@@ -84,7 +84,7 @@ h4 {
 
 		<div id="head" style="border: 1px solid white">
 			<h1>Cinephile</h1>
-			<h4><a href="home.do">HOME</a>&nbsp;|&nbsp;<a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
+			<h4><a href="getMovies.do">HOME</a>&nbsp;|&nbsp;<a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
 			<hr>
 		</div>
 
