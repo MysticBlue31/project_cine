@@ -10,9 +10,9 @@
 
 <style type="text/css">
 
- a:link { color: red; text-decoration: none;}
+ a:link { color: black; text-decoration: none;}
  a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
+ a:hover { color:gray; text-decoration: underline;}
 
 #wrapper {
 	width: 1200px;
@@ -22,7 +22,6 @@
 
 #body {
 	width: 1160px;
-	height: 450px;
 	margin: 20px;
 }
 
@@ -134,6 +133,7 @@ h4 {
 				<a href="favor.do"><input id="next" type="button" value="다음단계"></a>
 			</div>
 		</div>
+		<br><br><br>
 		<div id="foot" style="border: 1px solid white;">
 			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
 			이현용 || Advisor: 강병진

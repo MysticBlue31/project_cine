@@ -13,6 +13,11 @@
 </script>
 
 <style type="text/css">
+
+ a:link { color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color:gray; text-decoration: underline;}
+ 
 #wrapper {
 	width: 1200px;
 	border: 1px solid #eee;
@@ -21,7 +26,6 @@
 
 #body {
 	width: 1160px;
-	height: 450px;
 	margin: 20px;
 }
 
@@ -130,7 +134,7 @@ h4 {
 				        <td>
 				          <select name="score">
 				            <option value="">1~10점 중 선택</option>
-				            	<option value="10">10</option>
+				            <option value="10">10</option>
 				            <option value="9">9</option>
 				            <option value="8">8</option>
 				            <option value="7">7</option>
@@ -150,7 +154,10 @@ h4 {
 				<br><br><br>
 			</div>
 		</div>
-		<div id="foot" style="border: 1px solid white;"><b>'Cinephile'</b> since 2021 | Website administrator: 문해봄, 윤기천, 이하영, 이현용 | Advisor: 강병진 </div>
+		<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+		</div>
 	</div>
 </body>
 </html>

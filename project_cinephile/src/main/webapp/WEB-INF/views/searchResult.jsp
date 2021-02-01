@@ -1,14 +1,12 @@
-<%@page import="com.project.cine.dtos.MovieDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%request.setCharacterEncoding("UTF-8");%>
-<%response.setContentType("text/html; charset=UTF-8");%>
-<%@page import="com.project.cine.utils.Util"%>
+<%request.setCharacterEncoding("UTF-8"); %>
+<%response.setContentType("text/html; charset=UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>영화정보 | Cinephile</title>
+<title>검색결과 | Cinephile</title>
 
 <script type="text/javascript">
 </script>
@@ -27,7 +25,6 @@
 
 #body {
 	width: 1160px;
-	height: 450px;
 	margin: 20px;
 }
 
@@ -45,13 +42,14 @@
 	text-align: center;
 }
 
-.c2{
+.c1{
 	width:100px;
 	text-align:left;
 }
 
-.c3 {
-	text-align: left;
+.c2{
+	width:700px;
+	text-align:left;
 }
 
 #button {
@@ -59,12 +57,10 @@
 	left: 320px;
 }
 
-thead {
-	text-align: left;
+table {
+	border: 1px;
 }
-th {
-	padding-left:10px;
-}
+
 
 th, td {
 	vertical-align: top;
@@ -85,9 +81,6 @@ h4 {
 </style>
 
 </head>
-<%
-	MovieDto dto = (MovieDto)request.getAttribute("dto");
-%>
 
 <body>
 
@@ -100,39 +93,54 @@ h4 {
 		</div>
 
 		<div id="body" style="border: 1px solid white">
-			<h2>영화정보 </h2>
-			<div id="movieInfo">
-				<table style>
+			<h2>검색결과 X 건 </h2>
+			<div id="searchResult">
+				<table>
 					<colgroup>
 						<col class="c1">
 						<col class="c2">
-						<col class="c3">
 					</colgroup>
-					<thead><tr><th colspan="3">
-					${dto.m_title}<br>${dto.m_titleen}
-					</th></tr></thead>
 					<tr>
-						<td rowspan="6">
-							<img src="${dto.m_imgurl}" width="165" height="235.5">
+						<td>
+							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
 						</td>
-						<th>평점: </th>
-						<td>${dto.m_avgrate}</td>
+						<td>
+							<br><b>한글제목</b> (영어제목)<br>
+							장르 | 국가 | 상영시간 | 개봉연도<br>
+							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
+						</td>
 					</tr>
+				</table>
+				<table>
+					<colgroup>
+						<col class="c1">
+						<col class="c2">
+					</colgroup>
 					<tr>
-						<th>개요: </th>
-						<td>${dto.m_genre} | ${dto.m_nation} | ${dto.m_showtime}분 | ${dto.m_opendate}</td>
+						<td>
+							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
+						</td>
+						<td>
+							<br><b>한글제목</b> (영어제목)<br>
+							장르 | 국가 | 상영시간 | 개봉연도<br>
+							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
+						</td>
 					</tr>
+				</table>
+				<table>
+					<colgroup>
+						<col class="c1">
+						<col class="c2">
+					</colgroup>
 					<tr>
-						<th>감독: </th>
-						<td>${dto.m_director}</td>
-					</tr>
-					<tr>
-						<th>출연: </th>
-						<td><%=Util.getActorList(dto.getM_actor())%></td>
-					</tr>
-					<tr>
-						<th>등급: </th>
-						<td>${dto.m_grade}</td>
+						<td>
+							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
+						</td>
+						<td>
+							<br><b>한글제목</b> (영어제목)<br>
+							장르 | 국가 | 상영시간 | 개봉연도<br>
+							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
+						</td>
 					</tr>
 				</table>
 				<br><br><br>

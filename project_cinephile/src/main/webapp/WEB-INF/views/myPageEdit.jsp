@@ -14,9 +14,9 @@ response.setContentType("text/html; charset=UTF-8");
 
 <style type="text/css">
 
- a:link { color: red; text-decoration: none;}
+ a:link { color: black; text-decoration: none;}
  a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
+ a:hover { color:gray; text-decoration: underline;}
 
 #wrapper {
 	width: 1200px;
@@ -30,7 +30,6 @@ response.setContentType("text/html; charset=UTF-8");
 
 #body {
 	width: 400px;
-	height: 450px;
 	margin-left: 20px;
 }
 

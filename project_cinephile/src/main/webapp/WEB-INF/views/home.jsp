@@ -7,14 +7,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+<meta name="viewport" content="width=device-width">
 <title>Welcome to Cinephile!</title>
-
+<link href="style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 
- a:link { color: red; text-decoration: none;}
+ a:link { color: black; text-decoration: none;}
  a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
+ a:hover { color:gray; text-decoration: underline;}
+
 
 #wrapper {
 	width: 1200px;
@@ -24,7 +25,6 @@
 
 #body {
 	width: 1160px;
-	height: 450px;
 	margin: 20px;
 }
 
@@ -42,8 +42,35 @@
 	text-align: center;
 }
 
+input:-ms-input-placeholder {color:a8a8a8;}
+input::-webkit-input-placeholder {color:a8a8a8;}
+input::-moz-placeholder {color:a8a8a8;}
+
 #search {
-	text-align: center
+  height: 40px;
+  width: 400px;
+  border: 0px solid black;
+  margin: 0 auto;
+}
+
+input{
+  font-size: 16px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  float: left;
+}
+
+button{
+  color: white;
+  font-size: 16px;
+  width: 78.0px;
+  height: 100%;
+  border: 1px solid black;
+  float: right;
+  background: black;
+  text-color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -55,6 +82,7 @@ h3 {
 }
 
 h4 {
+	text-decoration: none;
 	text-align: right
 }
 
@@ -82,12 +110,10 @@ img {
 			<br>
 			<br>
 			<br>
-			<div id="search">
-				<form action="">
-					<input type="text" placeholder="검색어 입력">
-					<button>검색</button>
-				</form>
-			</div>
+			    <div id="search">
+			      <input type="text" placeholder="검색어 입력">
+			      <a href="searchResult.do"><button>검색</button></a>
+			    </div>
 			<br>
 			<br>
 			<br>
@@ -98,17 +124,20 @@ img {
 				{
 					MovieDto dto = list.get(i);
 					%>
-					<a href="getMovieInfo.do?m_code=<%=dto.getM_code()%>"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
+					<a href="movieInfo.do"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
 					<%
 				}
 			%>
 			</div>
 		</div>
+		<br>
+		
 			<div id="foot" style="border: 1px solid white;">
 			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
 			이현용 || Advisor: 강병진
 			</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 
 </html>

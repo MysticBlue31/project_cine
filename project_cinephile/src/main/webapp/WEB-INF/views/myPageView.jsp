@@ -12,10 +12,10 @@ response.setContentType("text/html; charset=UTF-8");
 <title>마이페이지 | Cinephile</title>
 <style type="text/css">
 
-a:link {color: red; text-decoration: none;}
-a:visited {color: black; text-decoration: none;}
-a:hover {color: blue; text-decoration: underline;}
-
+ a:link { color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color:gray; text-decoration: underline;}
+ 
 #wrapper {
 	width: 1200px;
 	border: 1px solid #eee;
@@ -28,7 +28,6 @@ a:hover {color: blue; text-decoration: underline;}
 
 #body {
 	width: 400px;
-	height: 450px;
 	margin-left: 20px;
 }
 
