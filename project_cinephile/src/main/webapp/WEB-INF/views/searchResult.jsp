@@ -1,3 +1,6 @@
+<%@page import="com.project.cine.utils.Util"%>
+<%@page import="com.project.cine.dtos.MovieDto"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%request.setCharacterEncoding("UTF-8"); %>
 <%response.setContentType("text/html; charset=UTF-8"); %>
@@ -81,6 +84,9 @@ h4 {
 </style>
 
 </head>
+<%
+	List<MovieDto> list = (List<MovieDto>)request.getAttribute("list");
+%>
 
 <body>
 
@@ -93,56 +99,31 @@ h4 {
 		</div>
 
 		<div id="body" style="border: 1px solid white">
-			<h2>검색결과 X 건 </h2>
+			<h2>검색결과 <%=list.size()%>건 </h2>
 			<div id="searchResult">
-				<table>
-					<colgroup>
-						<col class="c1">
-						<col class="c2">
-					</colgroup>
-					<tr>
-						<td>
-							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
-						</td>
-						<td>
-							<br><b>한글제목</b> (영어제목)<br>
-							장르 | 국가 | 상영시간 | 개봉연도<br>
-							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
-						</td>
-					</tr>
-				</table>
-				<table>
-					<colgroup>
-						<col class="c1">
-						<col class="c2">
-					</colgroup>
-					<tr>
-						<td>
-							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
-						</td>
-						<td>
-							<br><b>한글제목</b> (영어제목)<br>
-							장르 | 국가 | 상영시간 | 개봉연도<br>
-							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
-						</td>
-					</tr>
-				</table>
-				<table>
-					<colgroup>
-						<col class="c1">
-						<col class="c2">
-					</colgroup>
-					<tr>
-						<td>
-							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="77px" height="109.9px">
-						</td>
-						<td>
-							<br><b>한글제목</b> (영어제목)<br>
-							장르 | 국가 | 상영시간 | 개봉연도<br>
-							감독: ㅇㅇㅇ |출연: ㅇㅇㅇ, ㅇㅇㅇ, ㅇㅇㅇ
-						</td>
-					</tr>
-				</table>
+			<%
+				for(int i = 0; i < list.size(); i++)
+				{
+					MovieDto dto = list.get(i);
+				%>
+					<table>
+						<colgroup>
+							<col class="c1">
+							<col class="c2">
+						</colgroup>
+						<tr>
+							<td>
+								<a href="getMovieInfo.do?m_code=<%=dto.getM_code()%>"><img src="<%=dto.getM_imgurl()%>" width="77px" height="109.9px"></a>
+							</td>
+							<td>
+								<br><b><a href="getMovieInfo.do?m_code=<%=dto.getM_code()%>"><%=dto.getM_title()%></a></b> <%=dto.getM_titleen()%><br>
+								<%=dto.getM_genre()%> | <%=dto.getM_nation()%> | <%=dto.getM_showtime()%> | <%=dto.getM_opendate()%><br>
+								감독: <%=dto.getM_director()%> | 출연: <%=Util.getActorNameKR(dto.getM_actor()) %>
+							</td>
+					</table>
+				<%
+				}
+			%>
 				<br><br><br>
 			</div>
 		</div>

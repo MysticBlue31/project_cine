@@ -41,4 +41,16 @@ public class MovieController {
 		
 		return "movieInfo";
 	}
+	
+	@RequestMapping(value = "/searchResult.do", method = RequestMethod.GET)
+	public String searchResult(String keyword, Locale locale, Model model) {
+		logger.info("키워드로 검색하기", locale);
+		
+		List<MovieDto> list = movieService.getSearchResult(keyword);
+		model.addAttribute("list", list);
+		
+		System.out.println(list);
+		
+		return "searchResult";
+	}
 }

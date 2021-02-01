@@ -19,6 +19,7 @@ public class MovieDto {
 	private String m_summary;		//줄거리
 	private String m_imgurl;		//포스터 url
 	private String m_avgrate;		//평균 평점
+	private String m_keyword;		//키워드(영화제목+감독+배우)
 	
 	public MovieDto() {
 		super();
@@ -26,7 +27,7 @@ public class MovieDto {
 
 	public MovieDto(String m_code, String m_title, String m_titleen, String m_showtime, String m_prdtyear,
 			String m_opendate, String m_nation, String m_genre, String m_grade, String m_director, String m_actor,
-			String m_summary, String m_imgurl, String m_avgrate) {
+			String m_summary, String m_imgurl, String m_avgrate, String m_keyword) {
 		super();
 		this.m_code = m_code;
 		this.m_title = m_title;
@@ -42,13 +43,6 @@ public class MovieDto {
 		this.m_summary = m_summary;
 		this.m_imgurl = m_imgurl;
 		this.m_avgrate = m_avgrate;
-	}
-
-	@Override
-	public String toString() {
-		return "MinfoDto [m_code=" + m_code + ", m_title=" + m_title + ", m_titleen=" + m_titleen + ", m_showtime="
-				+ m_showtime + ", m_prdtyear=" + m_prdtyear + ", m_opendate=" + m_opendate + ", m_nation=" + m_nation
-				+ ", m_genre=" + m_genre + ", m_grade=" + m_grade + ", m_director=" + m_director + ", m_actor="
-				+ m_actor + ", m_summary=" + m_summary + ", m_imgurl=" + m_imgurl + ", m_avgrate=" + m_avgrate + "]";
+		this.m_keyword = m_keyword;
 	}
 }

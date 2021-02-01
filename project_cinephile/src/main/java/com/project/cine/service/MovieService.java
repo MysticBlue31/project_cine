@@ -28,4 +28,9 @@ public class MovieService implements IMovieService {
 	public MovieDto getMovieInfo(String m_code) {
 		return dao.getMovieInfo(m_code);
 	}
+
+	@Override
+	public List<MovieDto> getSearchResult(String keyword) {
+		return dao.getSearchResult(keyword);
+	}
 }

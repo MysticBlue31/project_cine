@@ -12,4 +12,6 @@ public interface IMovieService {
 	public List<MovieDto> getTopMovies();
 	//영화상세정보 구하기
 	public MovieDto getMovieInfo(String m_code);
+	//영화 제목 검색
+	public List<MovieDto> getSearchResult(String keyword);
 }

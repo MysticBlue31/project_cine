@@ -92,6 +92,20 @@ img {
 	margin-left: 3.5px;
 }
 </style>
+
+<script type="text/javascript">
+	function searchMovie(){
+		var keyword = document.getElementById("keyword").value;
+		
+// 		검색어 입력란이 비어있지 않을 경우
+		if(keyword != null && keyword != "")
+		{
+			//컨트롤러로 이동하면서 검색어 전달
+			location.href = "searchResult.do?keyword=" + keyword;
+		}
+	}
+</script>
+
 </head>
 <%
 	List<MovieDto> list = (List<MovieDto>)request.getAttribute("list");
@@ -111,8 +125,8 @@ img {
 			<br>
 			<br>
 			    <div id="search">
-			      <input type="text" placeholder="검색어 입력">
-			      <a href="searchResult.do"><button>검색</button></a>
+			      <input id="keyword" type="text" placeholder="검색어 입력"/>
+			      <button onclick="searchMovie()">검색</button>
 			    </div>
 			<br>
 			<br>

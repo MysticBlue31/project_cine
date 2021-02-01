@@ -33,4 +33,10 @@ public class MovieDao implements IMovieDao {
 	public MovieDto getMovieInfo(String m_code) {
 		return sqlSession.selectOne(namespace + "getMovieInfo", m_code);
 	}
+	
+	//영화 제목 검색
+	@Override
+	public List<MovieDto> getSearchResult(String keyword) {
+		return sqlSession.selectList(namespace + "getSearchResult", keyword);
+	}
 }
