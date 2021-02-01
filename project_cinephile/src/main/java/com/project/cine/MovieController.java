@@ -22,26 +22,13 @@ public class MovieController {
 	@Autowired
 	private IMovieService movieService;
 	
-	@RequestMapping(value = "/movieHome.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/getMovies.do", method = RequestMethod.GET)
 	public String Moviehome(Locale locale, Model model) {
-		logger.info("", locale);
+		logger.info("평점 순으로 영화 가져오기", locale);
 		
-		//쿼리 테스트 용, 나중에 수정 예정
-		List<MovieDto> list = movieService.getTopMovies();		//평점 상위 5개 영화 가져오기
-		for(int i = 0; i < list.size(); i++)
-		{
-			System.out.println(list.get(i));
-			
-			//한줄평 테이블에서 해당 영화코드로 검색 후 나온 영화의 평점들의 평균을 구하기
-			//구한 평균평점을 해당 영화정보의 평균평점 컬럼에 입력
-			boolean isS = movieService.setAvgRate(list.get(i).getM_code());
-			if(isS)
-				System.out.println(list.get(i).getM_avgrate());
-			else
-				System.out.println("실패");
-		}
+		List<MovieDto> list = movieService.getTopMovies();		//평점 상위 7개 영화 가져오기
+		model.addAttribute("list", list);
 		
 		return "home";
 	}
-	
 }
