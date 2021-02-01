@@ -2,8 +2,10 @@ package com.project.cine;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.cine.dtos.BoardDto;
 import com.project.cine.service.BoardService;
@@ -31,22 +34,6 @@ public class BoardController {
 	@Autowired
 	private IBoardService boardService;
 	
-							//이름은 마음대로 고치면 됨(메서드명도 마찬가지)
-//	@RequestMapping(value = "/boardHome.do", method = RequestMethod.GET)
-//	public String Boardhome(Locale locale, Model model) {
-//		logger.info("", locale);
-//		
-//		Date date = new Date();
-//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-//		
-//		String formattedDate = dateFormat.format(date);
-//		
-//		model.addAttribute("serverTime", formattedDate );
-//		
-//		
-//		return "home";
-//	}
-//	
 	
 	@RequestMapping(value = "/board.do", method = RequestMethod.GET)
 	public String boardList(HttpServletRequest request,Locale locale, Model model) {
@@ -59,8 +46,6 @@ public class BoardController {
 		model.addAttribute("list", list );
 		
 		System.out.println(list);
-		
-		
 		
 		return "board";
 	}
@@ -127,6 +112,7 @@ public class BoardController {
 	public String updateBoard(BoardDto dto, Locale locale, Model model) {
 		logger.info("글수정하기!! {}.", locale);
 		
+		System.out.println(dto);
 		boolean isS=boardService.updateBoard(dto);
 		if(isS) {
 			return "redirect:detailboard.do?w_seq="+dto.getW_seq();
@@ -134,5 +120,18 @@ public class BoardController {
 			model.addAttribute("msg", "답글추가실패");
 			return "error";
 		}
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/contentAjax.do", method = RequestMethod.POST)
+	public Map<String, BoardDto> contentAjax(BoardDto pdto, Locale locale, Model model) {
+		logger.info("글내용미리보기!! {}.", locale);
+		
+		BoardDto dto=boardService.getBoard(pdto.getW_seq());
+	
+		//클라이언트에 json으로 변환해서 보내주려면 Map객체에 데이터를 담아서 보내줘야 한다.
+		Map<String, BoardDto>map=new HashMap<>();
+		map.put("dto", dto);
+		return map;//Map객체를 바로 리턴한다.
 	}
 }

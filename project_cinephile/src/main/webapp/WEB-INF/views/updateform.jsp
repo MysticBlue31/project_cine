@@ -9,14 +9,14 @@
 <script type="text/javascript">
 	//자바스크립트를 이용해서 글목록보기로 이동하기
 	function boardListView(){
-		location.href="boardHome.do";
+		location.href="board.do";
 	}
 </script>
 </head>
 <body>
 <h1>글 수정하기</h1>
 <form action="updateboard.do" method="post">
-	<input type="hidden" name="seq" value="${dto.w_seq}"/>
+	<input type="hidden" name="w_seq" value="${dto.w_seq}"/>
 	<table border="1">
 		<tr>
 			<th>작성자(ID)</th>
@@ -24,11 +24,11 @@
 		</tr>
 		<tr>
 			<th>제 목</th>
-			<td><input type="text" name="title" value="${dto.w_title}"/></td>
+			<td><input type="text" name="w_title" value="${dto.w_title}"/></td>
 		</tr>
 		<tr>
 			<th>내 용</th>
-			<td><textarea  rows="10" cols="60" name="content">${dto.w_content}</textarea></td>
+			<td><textarea  rows="10" cols="60" name="w_content">${dto.w_content}</textarea></td>
 		</tr>
 		<tr>
 			<td colspan="2">

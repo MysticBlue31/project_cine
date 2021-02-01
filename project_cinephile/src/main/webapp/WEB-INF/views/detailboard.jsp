@@ -17,12 +17,12 @@
 		location.href="board.do";
 	}
 	//글 삭제요청하기
-	function delBoard(seq){//seq는 삭제할 글의 seq값
-		location.href="muldel.do&chk="+seq;
+	function delBoard(w_seq){//seq는 삭제할 글의 seq값
+		location.href="mul del.do&chk="+w_seq;
 	}
 	//글 수정요청하기
-	function updateBoard(seq){
-		location.href="updateform.do?seq="+seq;
+	function updateBoard(w_seq){
+		location.href="updateform.do?w_seq="+w_seq;
 	}
 	
 	//답글달기 폼 보여주기
@@ -76,7 +76,7 @@
 		</tr>
 		<tr>
 			<th>내용</th>
-			<td><textarea rows="10" cols="60" name="content" required="required"></textarea> </td>
+			<td><textarea rows="10" cols="60" name="w_content" required="required"></textarea> </td>
 		</tr>
 		<tr>	
 			<td colspan="2">

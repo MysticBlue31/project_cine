@@ -26,9 +26,7 @@ public class BoardDao implements IBoardDao {
 
 	@Override
 	public BoardDto getBoard(int w_seq) {
-//		Map<String, Integer>map=new HashMap<>();
-//		map.put("w_seq", w_seq);
-		return sqlSession.selectOne(namespace+"getAllList", w_seq);
+		return sqlSession.selectOne(namespace+"detailBoard", w_seq);
 	}
 	
 	@Override
@@ -40,7 +38,7 @@ public class BoardDao implements IBoardDao {
 
 	@Override
 	public boolean updateBoard(BoardDto dto) {
-		int count=sqlSession.update(namespace+"ansUpdateBoard", dto);
+		int count=sqlSession.update(namespace+"boardUpdateBoard", dto);
 		return count>0?true:false;
 	}
 
