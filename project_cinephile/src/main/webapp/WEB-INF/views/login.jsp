@@ -34,9 +34,11 @@
 
 #foot {
 	clear: both;
-	height: 30px;
+	height: 15px;
 	margin: 20px;
 	background: #eee;
+	font-size: small;
+	text-align: center;
 }
 
 table {
@@ -103,18 +105,15 @@ h4 {
 						<th></th>
 						<td><input id="loginBtn" type="button" value="로그인"></td>
 					</tr>
-
 				</table>
 				<br>
 				        <p class="login_msg">아직 cinephile이 아니라면 <u><b><a href="signin.do">회원가입</a></b></u> 하세요!</p>
 			</div>
-
 		</div>
-
-		<div id="foot" style="border: 1px solid white;"></div>
-
+		<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+		</div>
 	</div>
-
 </body>
-
 </html>

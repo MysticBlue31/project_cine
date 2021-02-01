@@ -18,6 +18,12 @@
 		<![CDATA[WHERE ROWNUM <= 7]]>
 	</select>
 	
+	<select id="getMovieInfo" resultType="MovieDto" parameterType="String">
+		SELECT *
+		FROM MINFO_INFO
+		WHERE M_CODE = #{m_code}
+	</select>
+	
 	<select id="getMovieCount" resultType="int">
 		SELECT COUNT(*) M_CODE
 		FROM MINFO_INFO

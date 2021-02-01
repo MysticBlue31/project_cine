@@ -14,9 +14,9 @@
 <!-- <result property="enabled" column="enabled"/> -->
 <!-- </resultMap> -->
 
-<!--  회원가입   -->
+<!-- 회원가입 -->
 <!-- <insert id="register" parameterType="UserDto"> -->
-<!-- 	INSERT INTO MINFO_USER(  -->
+<!-- 	INSERT INTO MINFO_USER( -->
 <!-- 	ID,PW,EMAIL,NAME,GRADE,REGDATE,ENABLED -->
 <!-- 	) VALUES (#{ID},#{PW},#{EMAIL},#{GRAGE},#{REGDATE},#{ENABLED} -->
 <!-- 	) -->

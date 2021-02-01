@@ -33,9 +33,11 @@
 
 #foot {
 	clear: both;
-	height: 30px;
+	height: 15px;
 	margin: 20px;
 	background: #eee;
+	font-size: small;
+	text-align: center;
 }
 
 table {
@@ -131,13 +133,11 @@ h4 {
 			<div id="button" class="button">
 				<a href="favor.do"><input id="next" type="button" value="다음단계"></a>
 			</div>
-
 		</div>
-
-		<div id="foot" style="border: 1px solid white;"></div>
-
+		<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+		</div>
 	</div>
-
 </body>
-
 </html>

@@ -11,6 +11,11 @@
 <title>Welcome to Cinephile!</title>
 
 <style type="text/css">
+
+ a:link { color: red; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
+
 #wrapper {
 	width: 1200px;
 	border: 1px solid #eee;
@@ -30,9 +35,11 @@
 
 #foot {
 	clear: both;
-	height: 30px;
+	height: 15px;
 	margin: 20px;
 	background: #eee;
+	font-size: small;
+	text-align: center;
 }
 
 #search {
@@ -68,6 +75,7 @@ img {
 		<div id="head" style="border: 1px solid white">
 			<h1>Cinephile</h1>
 			<h4><a href="getMovies.do">HOME</a>&nbsp;|&nbsp;<a href="myPageView.do">마이페이지</a>&nbsp;|&nbsp;<a href="board.do">영화수다</a>&nbsp;|&nbsp;<a href="login.do">로그인</a></h4>
+			<hr>
 		</div>
 
 		<div id="body" style="border: 1px solid white">
@@ -90,13 +98,16 @@ img {
 				{
 					MovieDto dto = list.get(i);
 					%>
-					<a href="movieInfo.do"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
+					<a href="getMovieInfo.do?m_code=<%=dto.getM_code()%>"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
 					<%
 				}
 			%>
 			</div>
 		</div>
-		<div id="foot" style="border: 1px solid white;"></div>
+			<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+			</div>
 	</div>
 </body>
 
