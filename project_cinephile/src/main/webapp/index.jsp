@@ -9,7 +9,7 @@
 <script type="text/javascript">
 	onload = function(){
 		//페이지가 시작하면 바로 MovieController로 보내서 데이터 구하기
-		location.href = "getMovies.do";		
+		location.href = "getMovies.do";
 	}
 </script>
 </head>
