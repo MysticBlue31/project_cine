@@ -134,4 +134,18 @@ public class BoardController {
 		map.put("dto", dto);
 		return map;//Map객체를 바로 리턴한다.
 	}
+	
+	@RequestMapping(value = "/muldel.do", method = RequestMethod.POST)
+	public String mulDel(String[] chk, Locale locale, Model model) {
+		logger.info("글여러개 삭제하기 {}.", locale);
+		
+		boolean isS=boardService.mulDel(chk);
+		if(isS) {
+			return "redirect:board.do";
+		}else {
+			model.addAttribute("msg", "여러글삭제실패");
+			return "error";
+		}
+	}
+	
 }

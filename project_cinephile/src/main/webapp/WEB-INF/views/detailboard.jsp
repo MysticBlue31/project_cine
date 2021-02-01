@@ -18,7 +18,7 @@
 	}
 	//글 삭제요청하기
 	function delBoard(w_seq){//seq는 삭제할 글의 seq값
-		location.href="mul del.do&chk="+w_seq;
+		location.href="muldel.do&chk="+w_seq;
 	}
 	//글 수정요청하기
 	function updateBoard(w_seq){
