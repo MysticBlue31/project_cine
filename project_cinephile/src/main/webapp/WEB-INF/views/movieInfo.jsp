@@ -36,9 +36,11 @@
 
 #foot {
 	clear: both;
-	height: 30px;
+	height: 15px;
 	margin: 20px;
 	background: #eee;
+	font-size: small;
+	text-align: center;
 }
 
 .c2{
@@ -131,7 +133,10 @@ h4 {
 				<br><br><br>
 			</div>
 		</div>
-		<div id="foot" style="border: 1px solid white;"></div>
+		<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+		</div>
 	</div>
 </body>
 </html>
