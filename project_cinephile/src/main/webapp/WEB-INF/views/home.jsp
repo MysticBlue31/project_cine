@@ -94,20 +94,6 @@ img {
 					<%
 				}
 			%>
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/0537/53741_P00_153933.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/0963/96379_P32_143209.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1434/143435_P166_181445.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1717/171755_P39_140011.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1641/164192_P45_134107.jpg"> -->
-<!-- 				<img -->
-<!-- 					src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1890/189000_P12_101301.jpg"> -->
 			</div>
 		</div>
 		<div id="foot" style="border: 1px solid white;"></div>

@@ -57,21 +57,7 @@ public class HomeController {
 		
 		return "signin";
 	}
-	
-	@RequestMapping(value = "/board.do", method = RequestMethod.GET)
-	public String board(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "board";
-	}
-	
+
 	@RequestMapping(value = "movieInfo.do", method = RequestMethod.GET)
 	public String movieInfo(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
