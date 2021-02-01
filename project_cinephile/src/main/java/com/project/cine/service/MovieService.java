@@ -23,4 +23,9 @@ public class MovieService implements IMovieService {
 	public List<MovieDto> getTopMovies() {
 		return dao.getTopMovies();
 	}
+
+	@Override
+	public MovieDto getMovieInfo(String m_code) {
+		return dao.getMovieInfo(m_code);
+	}
 }

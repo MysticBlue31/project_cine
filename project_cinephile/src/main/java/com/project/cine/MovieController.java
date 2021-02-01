@@ -23,12 +23,22 @@ public class MovieController {
 	private IMovieService movieService;
 	
 	@RequestMapping(value = "/getMovies.do", method = RequestMethod.GET)
-	public String Moviehome(Locale locale, Model model) {
+	public String getMovies(Locale locale, Model model) {
 		logger.info("평점 순으로 영화 가져오기", locale);
 		
 		List<MovieDto> list = movieService.getTopMovies();		//평점 상위 7개 영화 가져오기
 		model.addAttribute("list", list);
 		
 		return "home";
+	}
+	
+	@RequestMapping(value = "/getMovieInfo.do", method = RequestMethod.GET)
+	public String getMovieInfo(String m_code, Locale locale, Model model) {
+		logger.info("영화정보 가져오기", locale);
+		
+		MovieDto dto = movieService.getMovieInfo(m_code);
+		model.addAttribute("dto", dto);
+		
+		return "movieInfo";
 	}
 }

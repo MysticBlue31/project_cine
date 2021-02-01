@@ -1,6 +1,8 @@
+<%@page import="com.project.cine.dtos.MovieDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%request.setCharacterEncoding("UTF-8"); %>
-<%response.setContentType("text/html; charset=UTF-8"); %>
+<%request.setCharacterEncoding("UTF-8");%>
+<%response.setContentType("text/html; charset=UTF-8");%>
+<%@page import="com.project.cine.utils.Util"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,6 +85,9 @@ h4 {
 </style>
 
 </head>
+<%
+	MovieDto dto = (MovieDto)request.getAttribute("dto");
+%>
 
 <body>
 
@@ -104,30 +109,30 @@ h4 {
 						<col class="c3">
 					</colgroup>
 					<thead><tr><th colspan="3">
-					삼진그룹 영어토익반<br>SAMJIN COMPANY ENGLISH CLASS
+					${dto.m_title}<br>${dto.m_titleen}
 					</th></tr></thead>
 					<tr>
 						<td rowspan="6">
-							<img src="https://ssl.pstatic.net/imgmovie/mdi/mit110/1891/189141_P52_153007.jpg" width="165" height="235.5">
+							<img src="${dto.m_imgurl}" width="165" height="235.5">
 						</td>
 						<th>평점: </th>
-						<td>9.04</td>
+						<td>${dto.m_avgrate}</td>
 					</tr>
 					<tr>
 						<th>개요: </th>
-						<td>드라마 | 한국 | 110분 | 20201021</td>
+						<td>${dto.m_genre} | ${dto.m_nation} | ${dto.m_showtime}분 | ${dto.m_opendate}</td>
 					</tr>
 					<tr>
 						<th>감독: </th>
-						<td>이종필</td>
+						<td>${dto.m_director}</td>
 					</tr>
 					<tr>
 						<th>출연: </th>
-						<td>고아성/KO Asung/,이솜/E Som/,박혜수/PARK Hye-su/심보람,김예지//프론트직원,백현진/BEK Hyun-jin/,조현철/CHO Hyun-chul/,김종수/KIM Jong-soo/,김원해/KIM Won-hae/,배해선/BAE Hae-sun/,데이비드 맥기니스/David MCINNIS/,이성욱/LEE Sung-wook/,김희상//마케팅부 직원1,김희상//시사일보 기자</td>
+						<td><%=Util.getActorList(dto.getM_actor())%></td>
 					</tr>
 					<tr>
 						<th>등급: </th>
-						<td>12세이상관람가</td>
+						<td>${dto.m_grade}</td>
 					</tr>
 				</table>
 				<br><br><br>

@@ -98,7 +98,7 @@ img {
 				{
 					MovieDto dto = list.get(i);
 					%>
-					<a href="movieInfo.do"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
+					<a href="getMovieInfo.do?m_code=<%=dto.getM_code()%>"><img alt="<%=dto.getM_title()%>" src="<%=dto.getM_imgurl()%>"></a>
 					<%
 				}
 			%>
