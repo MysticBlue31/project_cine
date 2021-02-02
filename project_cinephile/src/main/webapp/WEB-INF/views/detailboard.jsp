@@ -88,7 +88,7 @@
 			<td><input type="text" name="w_title" required="required"/></td>
 		</tr>
 		<tr>
-			<th>내용</th>
+			<th>내 용</th>
 			<td><textarea rows="10" cols="60" name="w_content" required="required"></textarea> </td>
 		</tr>
 		<tr>	
