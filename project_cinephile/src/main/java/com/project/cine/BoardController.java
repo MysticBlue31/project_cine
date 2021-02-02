@@ -40,7 +40,7 @@ public class BoardController {
 		logger.info("글목록보기 {}.", locale);
 		
 		HttpSession session=request.getSession();
-		session.removeAttribute("readcount");
+		session.removeAttribute("w_readcount");
 		
 		List<BoardDto> list= boardService.getAllList();
 		model.addAttribute("list", list );
@@ -77,9 +77,9 @@ public class BoardController {
 		HttpSession session=request.getSession();
 		
 		//session에 "readcount"값이 null이라는 의미는 처음 현재 글을 조회한다는 뜻
-		if(session.getAttribute("readcount")==null) {
+		if(session.getAttribute("w_readcount")==null) {
 			boardService.readCount(w_seq);
-			session.setAttribute("readcount", w_seq);			
+			session.setAttribute("w_readcount", w_seq);			
 		}
 		
 		return "detailboard";
@@ -135,7 +135,7 @@ public class BoardController {
 		return map;//Map객체를 바로 리턴한다.
 	}
 	
-	@RequestMapping(value = "/muldel.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/muldel.do", method = RequestMethod.GET)
 	public String mulDel(String[] chk, Locale locale, Model model) {
 		logger.info("글여러개 삭제하기 {}.", locale);
 		

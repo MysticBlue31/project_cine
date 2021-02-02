@@ -9,7 +9,19 @@
 <script type="text/javascript" 
     src="http://code.jquery.com/jquery-latest.js"></script>
 <style type="text/css">
-	#replyForm{display: none;}
+	#replyForm{
+	display: none;
+	text-align: center;
+	}
+	
+	h1{
+	text-align: center;
+	}
+	
+	
+	table{
+	margin-left: 550px;
+	}
 </style>
 <script type="text/javascript">
 	//자바스크립트를 이용해서 글목록보기로 이동하기
@@ -18,7 +30,7 @@
 	}
 	//글 삭제요청하기
 	function delBoard(w_seq){//seq는 삭제할 글의 seq값
-		location.href="muldel.do&chk="+w_seq;
+		location.href="muldel.do?chk="+w_seq;
 	}
 	//글 수정요청하기
 	function updateBoard(w_seq){
@@ -31,6 +43,7 @@
 // 		divform.style.display="block";
 		$("#replyForm").stop().slideToggle();
 	}
+	
 </script>
 </head>
 <body>
@@ -85,7 +98,9 @@
 		</tr>
 	</table>
 </form>
+
 </div>
+
 </body>
 </html>
 

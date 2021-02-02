@@ -6,7 +6,7 @@
 
 	<select id="getAllList" resultType="BoardDto">
 		SELECT W_SEQ, ID, W_TITLE, W_CONTENT, W_REGDATE, W_REF, W_DELFLAG,
-			W_REPLY
+			W_REPLY, W_READCOUNT
 			FROM MINFO_BOARD 
 			ORDER BY W_REF
 	</select>
