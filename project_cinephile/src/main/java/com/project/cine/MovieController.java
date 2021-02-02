@@ -48,8 +48,7 @@ public class MovieController {
 		
 		List<MovieDto> list = movieService.getSearchResult(keyword);
 		model.addAttribute("list", list);
-		
-		System.out.println(list);
+		model.addAttribute("keyword", keyword);
 		
 		return "searchResult";
 	}

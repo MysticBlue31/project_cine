@@ -11,10 +11,14 @@ response.setContentType("text/html; charset=UTF-8");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>마이페이지 | Cinephile</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
+<script type="text/javascript">
 $(document).ready(function(){
     $("#tab1").load("comment.do");
-    $("#tab2").load("chart.do");
+    $("#tab2").load("getUserFavor.do?id=kc1");
+    
+    $(".tab").click(function(){
+    	 $("#tab2").load("getUserFavor.do?id=kc1");
+    });
 });
 </script>
 <style type="text/css">
@@ -116,7 +120,8 @@ h4 {
 /* Style the tab content */
 .tabcontent {
 	display: none;
-	background-color: #eee;
+/* 	background-color: #eee; */
+	background-color: #fff;
 	padding: 6px 12px;
 	color: #000;
 }
