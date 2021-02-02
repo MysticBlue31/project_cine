@@ -40,15 +40,28 @@
 
 #foot {
 	clear: both;
-	height: 30px;
+	height: 15px;
 	margin: 20px;
 	background: #eee;
+	font-size: small;
+	text-align: center;
+}
+
+#delBnt {
+	position: relative;
+	left: 105px;
+}
+
+#insertBnt {
+	position: relative;
+	left: 1005px;
 }
 
 table {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: right;
+	border-color:  #eee;
 }
 
 .login_msg {
@@ -61,7 +74,12 @@ h1 {
 }
 
 h2 {
-	text-align: center
+	position: relative;
+	left: 105px;
+}
+h3{
+	position: relative;
+	left: 100px;
 }
 
 h4 {
@@ -69,15 +87,15 @@ h4 {
 }
 
 th {
-      background-color: blue;
+      background-color: black;
       color: white;
       border-color:   white;
       text-align: center;
    }
    
    td {
-      background-color: orange;
-      border-color:  white;
+      background-color: white;
+      border-color:  #eee;
       text-align: center;
    }
    
@@ -93,7 +111,7 @@ th {
    }
    
    td > a:active {
-      color: yellow;
+      color: gray;
    }
    
    table {
@@ -171,18 +189,20 @@ th {
 
 		<div id="body" style="border: 1px solid white">
 			<h2>영화수다 게시판</h2>
-			<textarea rows="2" cols="40" name="preContent"></textarea>
+			<div id="insertBnt">
+	          <a href="insertform.do"><input type="button" value="글쓰기"/></a>
+	        </div>
+			<div id="delBnt">
+	          <input type="submit" value="선택 삭제"/>
+	        </div>
+<!-- 			<textarea rows="2" cols="40" name="preContent"></textarea> -->
 			<form action="muldel.do"  method="post" onsubmit="return chkConfirm()">
 			<table border="1">
-			   <col width="50px" />
-			   <col width="50px" />
-			   <col width="100px" />
-			   <col width="300px" />
-			   <col width="200px" />
-			   <col width="50px" />
-			   <col width="50px" />
-			   <col width="50px" />
-			   <col width="50px" />
+			   <col width="65px" />
+			   <col width="45px" />
+			   <col width="120px" />
+			   <col width="400px" />
+			   <col width="270px" />
 			   <col width="50px" />
 			   <tr>
 			      <th><input type="checkbox" name="all"  onclick="allSel(this.checked)" /></th>
@@ -222,19 +242,19 @@ th {
 			         }
 			      }
 			   %>
-			   <tr>
+<!-- 			   <tr>
 			      <td colspan="10" style="text-align: left;" >
-			         <a href="insertform.do">글쓰기</a> 
-			         <a href="getMovies.do">메인</a>
-			         <input type="submit" value="삭제"/>
+			         <a href="insertform.do">글쓰기</a>
 			      </td>
-			   </tr>
+			   </tr> -->
 			</table>
 			</form>
 		</div>
-		
-
-		<div id="foot" style="border: 1px solid white;"></div>
+		<br>
+			<div id="foot" style="border: 1px solid white;">
+			<b>'Cinephile'</b> since 2021 || Website administrator: 문해봄, 윤기천, 이하영,
+			이현용 || Advisor: 강병진
+			</div>
 
 		</div>
 

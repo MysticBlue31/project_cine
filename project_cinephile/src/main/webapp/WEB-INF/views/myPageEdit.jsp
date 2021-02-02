@@ -111,17 +111,18 @@ h4 {
 	padding: 14px 16px;
 	font-size: 17px;
 	transition: 0.3s;
+	border: 1px solid #eee;
 }
 /* Style the tab content */
 .tabcontent {
 	display: none;
-	background-color: rgb(0, 154, 200);
+	background-color: #eee;
 	padding: 6px 12px;
 	color: #000;
 }
 
 ul.tab li.current {
-	background-color: rgb(0, 154, 200);
+	background-color: #eee;
 	color: #222;
 }
 
@@ -145,7 +146,7 @@ ul.tab li.current {
 			<h2>마이페이지</h2>
 			<br> <br>
 			<div id="login">
-				<table style>
+				<table>
 					<colgroup>
 						<col class="c1">
 						<col class="c2">
@@ -199,7 +200,7 @@ ul.tab li.current {
 			<br><br><br><br><br>
 		</div>
 
-		 <div id="right" style="border: 1px solid black">
+		 <div id="right" style="border: 1px solid white">
 		
 <div id="container">
 		<ul class="tab">

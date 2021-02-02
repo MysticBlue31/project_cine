@@ -111,6 +111,7 @@ h4 {
 	padding: 14px 16px;
 	font-size: 17px;
 	transition: 0.3s;
+	border: 1px solid #eee;
 }
 /* Style the tab content */
 .tabcontent {
@@ -192,7 +193,7 @@ ul.tab li.current {
 
 		<div id="container">
 		<ul class="tab">
-			<li class="current" data-tab="tab1"><a href="#">나의 한줄평</a></li>
+			<li class="current" data-tab="tab1"><a href="">나의 한줄평</a></li>
 			<li data-tab="tab2"><a href="#">내 취향분석</a></li>
 
 		</ul>
