@@ -102,7 +102,7 @@ h4 {
 		<div id="body" style="border: 1px solid white">
 			<h2>영화정보 </h2>
 			<div id="movieInfo">
-				<table style>
+				<table>
 					<colgroup>
 						<col class="c1">
 						<col class="c2">
