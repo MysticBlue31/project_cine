@@ -3,6 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%request.setCharacterEncoding("UTF-8"); %>
 <%response.setContentType("text/html; charset=UTF-8"); %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 
 
 
@@ -235,7 +236,10 @@ th {
 			                  %>
 			                  
 			                </td>
-			               <td><%=dto.getW_regdate()%></td>
+			                
+			                 <td><f:formatDate value="<%=dto.getW_regdate()%>" 
+                       pattern="yyyy년MM월dd일 hh시mm분ss초"/></td>
+			               
 			               <td><%=dto.getW_readcount()%></td>
 			            </tr>
 			            <%
