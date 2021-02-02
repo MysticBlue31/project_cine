@@ -135,7 +135,7 @@ public class BoardController {
 		return map;//Map객체를 바로 리턴한다.
 	}
 	
-	@RequestMapping(value = "/muldel.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/muldel.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public String mulDel(String[] chk, Locale locale, Model model) {
 		logger.info("글여러개 삭제하기 {}.", locale);
 		

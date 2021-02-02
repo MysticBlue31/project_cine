@@ -8,7 +8,7 @@
 		SELECT W_SEQ, ID, W_TITLE, W_CONTENT, W_REGDATE, W_REF, W_DELFLAG,
 			W_REPLY, W_READCOUNT
 			FROM MINFO_BOARD 
-			ORDER BY W_REF
+			ORDER BY W_REGDATE DESC
 	</select>
 	
 	<select id="detailBoard" parameterType="int" resultType="BoardDto">
