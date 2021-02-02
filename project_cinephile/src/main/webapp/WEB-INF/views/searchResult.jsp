@@ -99,7 +99,7 @@ h4 {
 		</div>
 
 		<div id="body" style="border: 1px solid white">
-			<h2>검색결과 <%=list.size()%>건 </h2>
+			<h2>'${keyword}' 검색결과 <%=list.size()%>건 </h2>
 			<div id="searchResult">
 			<%
 				for(int i = 0; i < list.size(); i++)

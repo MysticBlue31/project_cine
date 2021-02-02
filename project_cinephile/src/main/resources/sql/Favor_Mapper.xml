@@ -4,6 +4,11 @@
 
 <mapper namespace="com.project.cine.favor">
 
+	<select id="getUserFavor" parameterType="String" resultType="FavorDto">
+		SELECT *
+		FROM MINFO_FAVOR
+		WHERE ID = #{id}
+	</select>
 	
 </mapper>
 
